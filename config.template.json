@@ -6,27 +6,23 @@
       "protocol": "vless",
       "settings": {
         "clients": [
-          { "id": "11111111-1111-1111-1111-111111111111" }
+          {
+            "id": "11111111-1111-1111-1111-111111111111"
+          }
         ],
         "decryption": "none"
       },
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/vpn",
-          "headers": {
-            "Host": "xray-vpn-production.up.railway.app"
-          }
+          "path": "/vpn"
         }
       }
     }
   ],
   "outbounds": [
-    { "protocol": "freedom" }
-  ],
-  "log": {
-    "access": "/dev/stdout",
-    "error": "/dev/stderr",
-    "loglevel": "warning"
-  }
+    {
+      "protocol": "freedom"
+    }
+  ]
 }
