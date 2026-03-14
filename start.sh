@@ -1,8 +1,6 @@
 #!/bin/sh
 
-PORT=${PORT:-8080}
-
-echo "Starting Xray on port $PORT"
+echo "PORT from Railway: $PORT"
 
 sed "s/PORT_PLACEHOLDER/$PORT/g" /etc/xray/config.template.json > /etc/xray/config.json
 
