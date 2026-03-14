@@ -1,0 +1,32 @@
+{
+  "inbounds": [
+    {
+      "port": PORT_PLACEHOLDER,
+      "listen": "0.0.0.0",
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          { "id": "11111111-1111-1111-1111-111111111111" }
+        ],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/vpn",
+          "headers": {
+            "Host": "xray-vpn-production.up.railway.app"
+          }
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    { "protocol": "freedom" }
+  ],
+  "log": {
+    "access": "/dev/stdout",
+    "error": "/dev/stderr",
+    "loglevel": "warning"
+  }
+}
